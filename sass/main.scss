@@ -1,9 +1,15 @@
 @import "mixin";
 
+$main-color: #ffffff;
+$secondary-color: #b90000;
+$background-color: black;
+
 html {
-    background-color: black;
-    color: white;
+    background-color: $background-color;
+    color: $main-color;
     font-family: 'Poppins', sans-serif;
+    height: 100%;
+
 }
 
 body {
@@ -11,26 +17,110 @@ body {
 }
 
 @include headings {
-    color: red;
+    color: $secondary-color;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.transition-scroll {
+    transition: 0.4s;
+
+}
+
+a {
+    text-decoration: none;
+    color: $main-color;
+}
+
+il {
+    list-style: none;
 }
 
 header {
+    position: fixed;
     display: flex;
-justify-content: space-between;
-align-items: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 0px 15px;
-    background-color: rgba($color: #ffffff, $alpha: 0.1);
+    // background-color: rgba($color: $main-color, $alpha: 0.1);
+    background: linear-gradient(rgba($color: $background-color, $alpha: 0.8), rgba($color: $background-color, $alpha: 0));
+    // background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    z-index: 2;
+    height: 100px;
+    width: 100%;
+
+    &:hover {
+        background: linear-gradient(rgba($color: $background-color, $alpha: 1),
+                rgba($color: $background-color, $alpha: 0.5) 85%,
+                rgba($color: $background-color, $alpha: 0));
+    }
 
     img {
         height: 80px;
     }
 
-    ul{
+    ul {
         display: flex;
     }
+
     li {
         padding: 0 40px;
-        list-style: none;
+        font-weight: 400;
+
+        &:hover {
+            font-weight: 600;
+            transition: 0.1;
+        }
     }
+}
+
+.bloc-page {
+    // padding: 20px;
+}
+
+.best-movie {
+    background-image: url("https://occ-0-55-56.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbph2VmR6kjndq9L2wtxXb-3xuVv9UjIyic4b9WMe9_MhTfGbWb8yI-apcBUbY_ImTn2C5omzxEFnlUaurfUPKQl-XzB.webp?r=082");
+    height: 85vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+}
+
+.carousel {
+    position: relative;
+    // top: -100px;
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 1 0 250px;
+    margin-left: 1rem;
+    scroll-snap-align: start;
+
+    img {
+
+        border-radius: 30px;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3d4852;
+    border-radius: 3px;
 }
