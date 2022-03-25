@@ -17,7 +17,7 @@ body {
 }
 
 @include headings {
-    color: $secondary-color;
+    color: $main-color;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -32,7 +32,7 @@ a {
     color: $main-color;
 }
 
-il {
+li {
     list-style: none;
 }
 
@@ -78,8 +78,8 @@ header {
     // padding: 20px;
 }
 
-.best-movie {
-    background-image: url("https://occ-0-55-56.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbph2VmR6kjndq9L2wtxXb-3xuVv9UjIyic4b9WMe9_MhTfGbWb8yI-apcBUbY_ImTn2C5omzxEFnlUaurfUPKQl-XzB.webp?r=082");
+#best-movie {
+    background-image: url("https://via.placeholder.com/1903x800");
     height: 85vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,6 +91,8 @@ header {
 .carousel {
     position: relative;
     // top: -100px;
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .carousel-items {
@@ -101,7 +103,7 @@ header {
 }
 
 .carousel-item {
-    flex: 1 0 250px;
+    flex: 1 0 20vw;
     margin-left: 1rem;
     scroll-snap-align: start;
 
