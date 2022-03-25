@@ -1,0 +1,28 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  z-index: 2;
+  height: 100px;
+  width: 100%;
+}
+header:hover {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.5) 85%, rgba(0, 0, 0, 0));
+}
+header img {
+  height: 80px;
+}
+header ul {
+  display: flex;
+}
+header li {
+  padding: 0 40px;
+  font-weight: 400;
+}
+header li:hover {
+  font-weight: 600;
+  transition: 0.4s;
+}/*# sourceMappingURL=header.css.map */

@@ -7,26 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <title>Just Stream It</title>
-    
+
 </head>
 
 <body>
     <header id="navbar" class="transition-scroll">
         <img src="img/logo-blanc.svg" alt="" srcset="">
         <ul>
-            <a href="#"><li>Accueil</li></a>
-            <a href="#"><li>Catégories</li></a>
+            <a href="#">
+                <li>Accueil</li>
+            </a>
+            <a href="#">
+                <li>Catégories</li>
+            </a>
         </ul>
     </header>
 
     <section class="bloc-page">
 
-        <section id="best-movie" class="best-movie">
+        <section id="best-movie" class="best-movie row">
+            <div class="col-6">
+                <div>
+                    <h1 id="best-movie-title">Place Holder Title</h1>
+                    <p id="best-movie-director" class="italic">Directeur: </p>
+                    <span class="clipzone">
+                        <img class="clipped" id="best-movie-rate" src="img/stars.svg" />
+                    </span>
+                    <span id="best-movie-note" class="hide">2.4/10</span>
+                    <button id="myBtn" class="my-4">
+                        <span class="material-icons-outlined md-48">info</span>
+                        <span>Plus d'infos</span>
+                    </button>
 
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </section>
 
 
@@ -35,94 +67,6 @@
 
             <ul class="carousel-items">
                 <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">My awesome article</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">Just another awesome article</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">Yet another awesome article</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">Wow! Another awesome article</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">That's some awesome article</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">Just a lot or articles !</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">One more, one more !</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">Again !</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <h2 class="card-title">One last</h2>
-                        <img src="https://placeimg.com/572/322/animals" />
-                        <div class="card-content">
-                            <p>Mewl for food at 4am chase mice. Scratch leg; meow for can opener to feed me purr when being pet nya nya nyan catasstrophe, fooled again thinking the dog likes me cough hairball on conveniently placed pants.</p>
-                            <a href="#" class="button">Read more</a>
-                        </div>
-                    </div>
                 </li>
             </ul>
         </section>
