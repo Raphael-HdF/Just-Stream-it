@@ -30,6 +30,40 @@
         </ul>
     </header>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="grid">
+                <span class="close">&times;</span>
+                <div class="modal-movie">
+                    <div id="movie-picture-col">
+                        <img id="movie-picture" src="https://via.placeholder.com/168x182">
+                    </div>
+                    <div id="movie-details-col">
+                        <h2 id="movie-title" class="my-3">Hello World</h2>
+                        <p><b>Genres : </b><span id="movie-genres">Romance</span></p>
+                        <p><b>Année : </b><span id="movie-year">1991</span></p>
+                        <p><b>Durée : </b><span id="movie-duration">51min</span></p>
+                        <p>
+                            <span class="clipzone">
+                                <img class="clipped" id="movie-rate" src="img/stars.svg" />
+                            </span>
+                            <span id="movie-note" class="hide">2.4/10</span>
+                        </p>
+                        <p><b>Votes : </b><span id="movie-vote">555</span></p>
+                        <p><b>Directeur : </b><span id="movie-directors">Charles Tait</span></p>
+                        <p><b>Scénaristes : </b><span id="movie-writers">Urban Gad</span></p>
+                        <p><b>Acteurs : </b><p id="movie-actors">Bella Cola</p></p>
+                        <p><b>Description : </b><p id="movie-description">Bella Cola</p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <section class="bloc-page">
 
         <section id="best-movie" class="best-movie row">
@@ -41,21 +75,11 @@
                         <img class="clipped" id="best-movie-rate" src="img/stars.svg" />
                     </span>
                     <span id="best-movie-note" class="hide">2.4/10</span>
-                    <button id="myBtn" class="my-4">
+                    <button id="1892" class="my-4" onClick="showModal(this.id)">
                         <span class="material-icons-outlined md-48">info</span>
                         <span>Plus d'infos</span>
                     </button>
 
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>Some text in the Modal..</p>
-                        </div>
-
-                    </div>
 
                 </div>
             </div>
@@ -73,7 +97,14 @@
 
 
     </section>
-
+    <!-- <script>
+        var modal = document.getElementById("myModal");
+         function showModal(id){
+     console.log(id);
+     modal.style.display = "block";
+}
+    </script> -->
+    <script src="./js/modal.js"></script>
     <script type="module" src="./js/index.js"></script>
     <!-- <script src="./dist/polyfill.bundle.js"></script> -->
     <!-- <script src="./dist/app.bundle.js"></script> -->
