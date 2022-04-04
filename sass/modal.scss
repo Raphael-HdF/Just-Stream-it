@@ -1,2 +1,68 @@
 @import 'variables.scss';
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  
+  /* Modal Content/Box */
+  .modal-content {
+      background-color: $background-color;
+      margin: 5% auto; /* 15% from the top and centered */
+      padding: 20px;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  .modal-movie{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+  }
+  
+  #movie-picture-col{
+      width: 50%;
+      img{
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+    }
+
+#movie-details-col{
+    width: 50%;
+    h2{
+        text-align: center;
+    }
+}
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .grid{
+      height: 100%;
+  }

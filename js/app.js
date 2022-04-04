@@ -15,10 +15,11 @@ export default async function setBestMovies(targetUrl, filmCount) {
 
     const bestMovie = document.getElementById("best-movie");
     const bestMovieRate = Number(listResults[0].imdb_score);
+    document.getElementById("best-movie-button").id = listResults[0].id;
+    
     document.getElementById("best-movie-director").innerHTML += listResults[0].directors.join(", ");
     document.getElementById("best-movie-note").innerHTML = [bestMovieRate,"/10"].join("");
     document.getElementById("best-movie-rate").style.width = [bestMovieRate*10,"px"].join("");
-    const newImage = listResults[0].image_url;
-    bestMovie.style.backgroundImage = "url('" + newImage + "')"
+    bestMovie.style.backgroundImage = "url('" + listResults[0].image_url + "')"
     return listResults;
 }

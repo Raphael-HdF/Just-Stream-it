@@ -24,7 +24,7 @@ header li {
 }
 header li:hover {
   font-weight: 600;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .my-1 {
@@ -52,117 +52,6 @@ header li:hover {
   margin-bottom: 5rem;
 }
 
-html {
-  background-color: black;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-h1, h2, h3,
-h4, h5, h6 {
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
-
-.transition-scroll {
-  transition: 0.4s;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-li {
-  list-style: none;
-}
-
-.italic {
-  font-style: italic;
-}
-
-button {
-  color: #292929;
-  font-size: 1.3rem;
-  font-weight: 500;
-  padding: 0.6rem 1.5rem;
-  border: none;
-  border-radius: 3px;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-}
-button * {
-  align-self: center;
-  margin: 0 0.2rem;
-}
-button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-}
-
-#best-movie {
-  background-image: url("https://via.placeholder.com/1903x800");
-  height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
-}
-#best-movie h1 {
-  font-size: 3rem;
-  margin-bottom: 0;
-}
-#best-movie p + h1 {
-  text-shadow: 1px 1px 4px black;
-}
-
-#best-movie-director {
-  color: #d4d4d4;
-}
-
-.clipped {
-  height: 18.29px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0% 0;
-     object-position: 0% 0;
-}
-
-.clipzone {
-  margin-right: 1rem;
-}
-
-.clipzone:hover + .hide {
-  transition: 0.4s;
-  visibility: visible;
-}
-
-.hide {
-  transition: 0.8s;
-  visibility: hidden;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.col-6 {
-  grid-column: 2/7;
-  grid-row: 1;
-  display: flex;
-}
-.col-6 * {
-  align-self: center;
-}
-
 .modal {
   display: none;
   /* Hidden by default */
@@ -185,12 +74,11 @@ button:hover {
 /* Modal Content/Box */
 .modal-content {
   background-color: black;
-  margin: 15% auto;
+  margin: 5% auto;
   /* 15% from the top and centered */
   padding: 20px;
   width: 50%;
   /* Could be more or less, depending on screen size */
-  height: 50vh;
 }
 
 .modal-movie {
@@ -237,4 +125,221 @@ button:hover {
 
 .grid {
   height: 100%;
+}
+
+html {
+  background-color: black;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+html + body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.transition-scroll {
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+button {
+  color: #292929;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+button * {
+  align-self: center;
+  margin: 0 0.2rem;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+#best-movie {
+  background-image: url("https://via.placeholder.com/1903x800");
+  min-height: 85vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+#best-movie h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+#best-movie p + h1 {
+  text-shadow: 1px 1px 4px black;
+}
+
+#best-movie-director {
+  color: #d4d4d4;
+}
+
+.clipped {
+  height: 18.29px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 0;
+     object-position: 0% 0;
+}
+
+.clipzone {
+  margin-right: 1rem;
+}
+
+.clipzone:hover + .hide {
+  transition: 0.3s;
+  visibility: visible;
+}
+
+.hide {
+  transition: 0.8s;
+  visibility: hidden;
+}
+
+.show {
+  transition: 0.8s;
+  visibility: visible;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col-6 {
+  grid-column: 2/7;
+  grid-row: 1;
+  display: flex;
+}
+.col-6 * {
+  align-self: center;
+}
+
+.container {
+  padding: 50px;
+  line-height: 1.4;
+  position: relative;
+  top: -170px;
+}
+
+.title {
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item {
+  margin: 10px 10px 40px 10px;
+  box-shadow: 0 15px 35px rgba(50, 50, 50, 0.1019607843), 0 5px 15px rgba(0, 0, 0, 0.1019607843);
+  transition: transform 0.3s;
+  transform: translate3d(0, -1px, 0);
+}
+.item:hover {
+  transform: translate3d(0, -10px, 0);
+}
+.item img {
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.item_body {
+  padding: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(black, rgba(0, 0, 0, 0.7) 85%, rgba(0, 0, 0, 0));
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.item_body h3 {
+  font-size: 1.5rem;
+}
+
+.items {
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel_container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.carousel_item {
+  cursor: pointer;
+  float: left;
+}
+
+.carousel_prev, .carousel_next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff url(../img/right.svg) center center no-repeat;
+  background-size: 20px 20px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -20px;
+  right: -20px;
+  box-shadow: 0 15px 35px rgba(50, 50, 50, 0.1019607843), 0 5px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel_prev {
+  background-image: url(../img/left.svg);
+  right: auto;
+  left: -20px;
+}
+
+.carousel_prev:hover, .carousel_next:hover {
+  transform: scale(1.2);
+}
+
+.carousel_next-hidden, .carousel_prev-hidden {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */
