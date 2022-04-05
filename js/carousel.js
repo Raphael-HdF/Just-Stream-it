@@ -1,4 +1,4 @@
-class Carousel {
+export default class Carousel {
 
     /**
      * 
@@ -129,11 +129,11 @@ class Carousel {
 
 
 // document.addEventListener('DOMContentLoaded', function (){
-    new Carousel(document.querySelector('.movie-carousel'), {
-        slidesToScroll: 3,
-        slidesVisible: 4,
-        loop: false
-    })
+    // new Carousel(document.querySelector('.best-movies'), {
+    //     slidesToScroll: 3,
+    //     slidesVisible: 4,
+    //     loop: false
+    // })
     
 
 // })
