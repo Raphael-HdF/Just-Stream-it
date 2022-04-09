@@ -21,6 +21,7 @@ export default class Carousel {
         this.isMobile = false;
         this.currentItem = 0;
         this.moveCallbacks = [];
+        
         // Modifications du DOM
         this.root = this.createDivWithClass('carousel');
         this.container = this.createDivWithClass('carousel_container');
@@ -126,15 +127,3 @@ export default class Carousel {
         return div;
     }
 }
-
-
-// document.addEventListener('DOMContentLoaded', function (){
-    // new Carousel(document.querySelector('.best-movies'), {
-    //     slidesToScroll: 3,
-    //     slidesVisible: 4,
-    //     loop: false
-    // })
-    
-
-// })
-

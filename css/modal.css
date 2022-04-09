@@ -3,7 +3,7 @@
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 3;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -23,7 +23,7 @@
   margin: 5% auto;
   /* 15% from the top and centered */
   padding: 20px;
-  width: 50%;
+  width: 70%;
   /* Could be more or less, depending on screen size */
 }
 
@@ -32,10 +32,17 @@
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .modal-movie {
+    flex-direction: row;
+  }
 }
 
 #movie-picture-col {
   width: 50%;
+  margin: 2rem;
 }
 #movie-picture-col img {
   max-width: 100%;
@@ -45,10 +52,15 @@
 }
 
 #movie-details-col {
-  width: 50%;
+  width: 80%;
 }
 #movie-details-col h2 {
   text-align: center;
+}
+@media (min-width: 992px) {
+  #movie-details-col {
+    width: 50%;
+  }
 }
 
 /* The Close Button */
@@ -58,8 +70,8 @@
   font-size: 28px;
   font-weight: bold;
   position: relative;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
 }
 
 .close:hover,

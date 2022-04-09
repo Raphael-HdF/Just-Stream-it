@@ -1,0 +1,113 @@
+@import "variables.scss";
+
+
+
+.container{
+    padding: 50px;
+    line-height: 1.4;
+    position: relative;
+    top: -7rem;
+    @media (min-width: $lg) { 
+        top: -15rem;
+       }
+}
+
+
+.title{
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item{
+    margin: 10px 10px 40px 10px;
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a ;
+    transition: transform $fast-transition;
+    transform: translate3d(0, -1px, 0);
+    &:hover{
+        transform: translate3d(0, -10px, 0);
+    }
+    
+    img{
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.item_body{
+    padding: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba($color: $background-color, $alpha: 1),
+    rgba($color: $background-color, $alpha: 0.7) 85%,
+    rgba($color: $background-color, $alpha: 0));
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: $fast-transition;
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+.items{
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    // overflow: hidden;
+}
+
+.carousel_container{
+    transition: $fast-transition;
+}
+
+.carousel_container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel_item{
+    cursor: pointer;
+    float: left;
+}
+
+.carousel_prev, .carousel_next{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff url(../img/right.svg) center center no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    right: -20px;
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a ;
+    cursor: pointer;
+    transition: transform $fast-transition, opacity $fast-transition;
+}
+
+.carousel_prev {
+    background-image: url(../img/left.svg);
+    right: auto;
+    left: -20px;
+}
+
+.carousel_prev:hover, .carousel_next:hover{
+    transform: scale(1.2);
+}
+
+.carousel_next-hidden, .carousel_prev-hidden{
+    opacity: 0;
+}
