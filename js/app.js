@@ -18,7 +18,6 @@ export async function setBestMovies(targetUrl, filmCount) {
 
     const bestMovie = document.getElementById("best-movie");
     const bestMovieRate = Number(listResults[0].imdb_score);
-    // document.getElementById("best-movie-button").id = listResults[0].id;
     document.getElementById("best-movie-button").dataset.movieid = listResults[0].id
     
     document.getElementById("best-movie-title").innerHTML = listResults[0].title;
@@ -89,56 +88,4 @@ export async function setCategoryMovies(targetUrl, filmCount, genre, divClass) {
         
     }
     return bestMovies;
-}
-
-export async function setMovies(targetUrl, filmCount, genre, title, sort = "") {
-    const aboveItem = document.getElementById('best-movies')
-    const parentItem = aboveItem.parentElement
-
-    let container = createDivWithClass('container')
-    parentItem.appendChild(container);
-    let divTitle = createDivWithClass('title')
-    divTitle.innerHTML = title
-    container.appendChild(divTitle)
-
-    let className = genre + '-movies'
-    let divMovies = createDivWithClass(className)
-    container.appendChild(divMovies)
-
-    const sortBy = (sort != "") ? '&sort_by=' + sort : ""
-
-    let listResults = [];
-    let page = 1;
-    while (listResults.length < filmCount){
-        let url = [targetUrl, 'page=', page, '&genre=', genre, sortBy].join('');
-        let response = await fetch(url);
-        let data = await response.json();
-        let results = data.results
-        listResults = listResults.concat( results);
-        page ++;
-    }           
-
-    // let bestMovies = document.querySelector('.' + divClass)
-    for (let i = 1; i <= filmCount; i++){
-        let item = document.createElement('div');
-        item.classList.add('item', 'movie-button');
-        divMovies.appendChild(item);
-
-        let itemImage = document.createElement('div');
-        itemImage.classList.add('item_image');
-        item.appendChild(itemImage);
-
-        let itemBody = document.createElement('div');
-        itemBody.classList.add('item_body', 'hide');
-        item.appendChild(itemBody);
-
-        let image = document.createElement('img');
-        itemImage.appendChild(image);
-
-        image.src = listResults[i].image_url;
-        itemBody.innerHTML = '<h3>' + listResults[i].title + '</h3>'
-        item.dataset.movieid = listResults[i].id
-        
-    }
-    return divMovies;
 }
