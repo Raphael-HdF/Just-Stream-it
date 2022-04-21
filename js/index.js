@@ -19,24 +19,18 @@ function setModal() {
     new Modal("myModal", "movie-button", baseUrl + "titles/")
 }
 
-setBestMovies(urlBestMovie, filmCount)
-.then(function(){
-    new Carousel(document.querySelector('.best-movies'), carrouselSettings)})
-.then(setModal())
-.then(hover => hoverOnCards())
+async function setPage(urlBestMovie, filmCount, carrouselSettings){
+    let bestMovies = setBestMovies(urlBestMovie, filmCount)
+    let carousel1 = new Carousel(await bestMovies, carrouselSettings)
+    
+    let comedyMovies = setCategoryMovies(urlBestMovie, filmCount, "comedy", "comedy-movies")
+    let carousel2 = new Carousel(await comedyMovies, carrouselSettings)
+    
+    let romanceMovies = setCategoryMovies(urlBestMovie, filmCount, "romance", "romance-movies")
+    let carousel3 = new Carousel(await romanceMovies, carrouselSettings)
 
-setCategoryMovies(urlBestMovie, filmCount, "comedy", "comedy-movies")
-.then(item => {
-    new Carousel(item, carrouselSettings)})
-.then(setModal())
-.then(hover => hoverOnCards())
+    setModal()
+    hoverOnCards()
+}
 
-
-setCategoryMovies(urlBestMovie, filmCount, "romance", "romance-movies")
-.then(item => {
-    new Carousel(item, carrouselSettings)})
-.then(setModal())
-.then(hover => hoverOnCards())
-
-
-
+setPage(urlBestMovie, filmCount, carrouselSettings)

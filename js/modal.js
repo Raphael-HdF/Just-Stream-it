@@ -5,11 +5,9 @@ export default class Modal {
 
         // Get the modal
         var modal = document.getElementById(modalId);
-        // var modal = document.getElementById("myModal");
 
         // Get the button that opens the modal
         var buttons = document.getElementsByClassName(buttonClass);
-        // var buttons = document.getElementsByClassName("movie-button");
 
         for (let item of buttons) {
             item.onclick = function () {
@@ -20,7 +18,6 @@ export default class Modal {
         async function setModalMovie(id) {
             let modal = document.getElementById("myModal");
             let url = [baseUrl, id].join('');
-            // let url = ["http://localhost:8000/api/v1/titles/", id].join('');
             let response = await fetch(url);
             let results = await response.json();
             document.getElementById("movie-picture").src = results.image_url;

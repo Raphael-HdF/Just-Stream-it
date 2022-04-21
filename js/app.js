@@ -49,7 +49,7 @@ export async function setBestMovies(targetUrl, filmCount) {
         item.dataset.movieid = listResults[i].id
         
     }
-    // return listResults;
+    return bestMovies;
 }
 
 
